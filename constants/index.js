@@ -1,4 +1,4 @@
-const CHALLANGE_TIME = 10;
+const CHALLANGE_TIME = 60;
 const GENERATE_COUNT = 200;
 
 export {

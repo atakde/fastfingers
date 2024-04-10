@@ -5,6 +5,24 @@ export const Results = ({
   correctWords,
   keyStrokes
 }) => {
+  /* 
+  Example:
+
+  WPM (Words Per Minute) is a calculation of exactly how fast someone types with no error penalties. 
+  The gross typing speed is calculated by taking all words typed and dividing by the time it took to type the words in minutes. 
+  A "word" is equivalent to five keystrokes (including spaces, numbers, letters, and punctuation marks).  
+
+  Total Keys Pressed = 200
+  Time Elapsed in Minutes = 1.5
+  WPM = ( (200 / 5) / 1.5 ) = 26
+  */
+  const calculateGrossWPM = () => {
+    const totalNumberOfWords = keyStrokes.length / 5;
+    const wpm = totalNumberOfWords / 1; // 1 minute = 60 seconds
+
+    return wpm;
+  };
+
   return (
     <ResultsWrapper>
       <div>
@@ -18,6 +36,10 @@ export const Results = ({
       <div>
         <span>Key Strokes</span>
         <span>{keyStrokes.length}</span>
+      </div>
+      <div>
+        <span>WPM</span>
+        <span>{calculateGrossWPM()}</span>
       </div>
     </ResultsWrapper>
   );
