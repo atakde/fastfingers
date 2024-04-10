@@ -5,6 +5,7 @@ import { CHALLANGE_TIME, GENERATE_COUNT } from "@/constants";
 import TypingArea from "@/components/TypingArea";
 import Container from "@/components/Container";
 import Results from "@/components/Results";
+import Title from "@/components/Title";
 
 const Home = () => {
   const inputRef = useRef(null);
@@ -96,6 +97,10 @@ const Home = () => {
 
   return (
     <Container>
+      <Title
+        align="center"
+        title="Typing Challange"
+      />
       <WordsArea
         words={words}
         currentWordIndex={currentWordIndex}

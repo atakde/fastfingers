@@ -37,7 +37,7 @@ export const Results = ({
         <span>Key Strokes</span>
         <span>{keyStrokes.length}</span>
       </div>
-      <div>
+      <div className="wpm">
         <span>WPM</span>
         <span>{calculateGrossWPM()}</span>
       </div>
