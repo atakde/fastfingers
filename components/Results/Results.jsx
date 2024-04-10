@@ -1,3 +1,4 @@
+import { MAX_ERRORS } from "@/constants";
 import { ResultsWrapper } from "./ScResults"
 
 export const Results = ({
@@ -22,6 +23,16 @@ export const Results = ({
 
     return wpm;
   };
+
+  const isErrorLimitReached = wrongWords.length > MAX_ERRORS;
+
+  if (isErrorLimitReached) {
+    return (
+      <ResultsWrapper>
+        You have reached the maximum error limit.
+      </ResultsWrapper>
+    );
+  }
 
   return (
     <ResultsWrapper>
