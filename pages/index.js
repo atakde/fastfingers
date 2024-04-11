@@ -84,6 +84,10 @@ const Home = () => {
     isTimerStarted.current = false;
     setInputValue("");
     setCurrentWordIndex(0);
+    // why a lot of states :((
+    setWrongWords([]);
+    setCorrectWords([]);
+    setKeyStrokes([]);
 
     // generate new words
     const randomWords = generate(GENERATE_COUNT);
